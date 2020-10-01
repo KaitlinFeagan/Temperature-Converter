@@ -1,0 +1,11 @@
+* {
+    margin: 0;
+    padding: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-size: xx-large;
+    font-weight: bold;
+    background-color: aquamarine;
+}
