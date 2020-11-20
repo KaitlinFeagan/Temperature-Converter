@@ -1,14 +1,34 @@
-const ftoc = function(temp) {
-  let c = (temp - 32) * (5 / 9);
-  c = Math.round(c * 10) / 10;
-  return c;
-}
+let button = document.querySelector('button');
 
-const ctof = function(temp) {
-  let f = temp * (9 / 5) + 32;
-  f = Math.round(f * 10) / 10;
-  return f;
-}
+let main = document.getElementById('main');
 
-console.log("72 degrees Fahrenheit is " + ftoc(72) + " degrees Celsius.")
-console.log("100 degrees Celsius is " + ctof(100) + " degrees Fahrenheit.")
+let f2c = document.getElementById('ftoc');
+let c2f = document.getElementById('ctof');
+
+button.addEventListener('click', () => {
+  let temperature = parseInt(document.getElementById('temperature').value);
+
+  let solution = document.getElementById('solution');
+
+  const ftoc = function(temp) {
+    let c = (temp - 32) * (5 / 9);
+    c = Math.round(c * 10) / 10;
+    return c;
+  }
+  
+  const ctof = function(temp) {
+    let f = temp * (9 / 5) + 32;
+    f = Math.round(f * 10) / 10;
+    return f;
+  }
+
+  if (c2f.checked == true && f2c.checked == false) {
+    solution.textContent = temperature + " degrees Celcius is " + ctof(temperature) + " degrees Fahrenheit."
+  } else if (f2c.checked == true && c2f.checked == false) {
+    solution.textContent = temperature + " degrees Fahrenheit is " + ftoc(temperature) + " degrees Celcius."
+  } else {
+    solution.textContent = "Kaitlin sure is BAD at this!"
+  }
+});
+
+
