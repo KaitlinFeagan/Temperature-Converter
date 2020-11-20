@@ -2,13 +2,31 @@
 <html>
     <head>
     <meta charset="UTF-8">
-    <title>JavaScript Exercises!</title>
+    <title>Temperature converter</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
     </head>
     <body>
-        <h1>Trying to get good at this!</h1>
+        <h1 class="header">Fahrenheit to Celcius temperature converter</h1>
         <br>
-        
+        <div class="white" id="white">
+            <div class="instructions" id="instructions">Go ahead and convert your temperature below!</div>
+            <div class="main" id="main">
+                <form>
+                    <label for="temperature">
+                    Type in the temperature: </label>
+                    <input type="number" id="temperature" class="temperature" name="temp">
+                        <br>
+                    <input type="radio" id="ftoc" name="temp" value="ftoc">
+                    <label for="ftoc">Fahrenheit to Celcius</label>
+                    <input type="radio" id="ctof" name="temp" value="ctof">
+                    <label for="ctof">Celcius to Fahrenheit</label>
+                </form>
+                <br>
+                <button class="convert" id="convert">Convert!</button>
+                <br>
+                <div class="solution" id="solution"></div>
+            </div>
+        </div>
 
     </body>
     <script src="script.js"></script>
